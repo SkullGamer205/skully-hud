@@ -1,0 +1,236 @@
+// Basic Stuff
+base Doom;
+height 0;
+monospacefonts true, "0", center;
+
+resolution 320, 200;
+
+StatusBar Fullscreen, FullscreenOffsets {
+// Draw Modules
+ifCvarInt sthud_barless, 0, equal {
+
+// Bottom Left
+	Drawimage "STFACE"   ,  0   , -32  ;
+	Drawimage "STHEALTH" ,  34  , -32  ;
+	Drawimage "STARMOR"  ,  34  , -16  ;
+	Drawimage "STARMOR"  ,  34  , -16  ;
+	Drawimage "STKEYS"   ,  92  , -32  ;
+
+inInventory PowerStrength {
+	Drawimage "BSKMINI"  ,  25  , -31  ;
+}
+// Bottom Right
+	Drawimage "STAMMO"   , -46  , -32  ;
+}
+
+// STBAR'less Modules
+ifCvarInt sthud_barless, 1, equal {
+
+// Health ////////////
+	inInventory PowerStrength {
+		Drawimage "BERSERK"  ,  37  , -29  ;
+	} else
+	{ Drawimage "HEALTH" ,  37 , -29  ; }
+
+// Armor /////////////
+		Drawimage "ARMOR"   ,  37  , -13  ;
+
+	UsesSecondaryAmmo {
+	Drawimage "CLIP"     , -22  , -3 , centerbottom  ;
+	} else UsesAmmo {
+	Drawimage "AMMO"     , -38  , -9 ;	
+	}
+}
+
+// Weapon Slots ////////////////////////////////////////////////////////////////
+
+DrawSwitchableImage  WeaponSlot 9 , "STGNUM0" , "STYSNUM0" ,  -43 , -38 ;
+DrawSwitchableImage  WeaponSlot 1 , "STGNUM1" , "STYSNUM1" ,  -39 , -38 ;
+DrawSwitchableImage  WeaponSlot 2 , "STGNUM2" , "STYSNUM2" ,  -35 , -38 ;
+DrawSwitchableImage  WeaponSlot 3 , "STGNUM3" , "STYSNUM3" ,  -31 , -38 ;
+DrawSwitchableImage  WeaponSlot 4 , "STGNUM4" , "STYSNUM4" ,  -27 , -38 ;
+DrawSwitchableImage  WeaponSlot 5 , "STGNUM5" , "STYSNUM5" ,  -23 , -38 ;
+DrawSwitchableImage  WeaponSlot 6 , "STGNUM6" , "STYSNUM6" ,  -19 , -38 ;
+DrawSwitchableImage  WeaponSlot 7 , "STGNUM7" , "STYSNUM7" ,  -15 , -38 ;
+DrawSwitchableImage  WeaponSlot 8 , "STGNUM8" , "STYSNUM8" ,  -11 , -38 ;
+DrawSwitchableImage  WeaponSlot 9 , "STGNUM9" , "STYSNUM9" ,  -7  , -38 ;
+
+// Health (51 -28) /////////////////////////////////////////////////////////////
+ifCvarInt sthud_hpap_centered, 0, equal {
+		ifCvarInt sthud_boom_colors, 0, equal {
+		DrawNumber  4, SmallFont, untranslated, Health, alignment(left), 51, -28;
+		} else // RIGHT + NO BOOM
+		ifCvarInt sthud_boom_colors, 1, equal {
+		ifHealth 101 {
+			DrawNumber  4, SmallFont, Blue, Health, alignment(left), 51, -28;
+			} else ifHealth 51 {
+			DrawNumber  4, SmallFont, Green, Health, alignment(left), 51, -28;
+			} else ifHealth 26 {
+			DrawNumber  4, SmallFont, Gold, Health, alignment(left), 51, -28;
+			} else {
+			DrawNumber  4, SmallFont, Red, Health, alignment(left), 51, -28;
+			}
+		} // RIGHT + BOOM
+	} else
+ifCvarInt sthud_hpap_centered, 1, equal {
+		ifCvarInt sthud_boom_colors, 0, equal {
+		DrawNumber  4, SmallFont, untranslated, Health, alignment(center), 63, -28;
+		} else // CENTER + NO BOOM
+		ifCvarInt sthud_boom_colors, 1, equal {
+		ifHealth 101 {
+			DrawNumber  4, SmallFont, Blue, Health, alignment(center), 63, -28;
+			} else ifHealth 51 {
+			DrawNumber  4, SmallFont, Green, Health, alignment(center), 63, -28;
+			} else ifHealth 26 {
+			DrawNumber  4, SmallFont, Gold, Health, alignment(center), 63, -28;
+			} else {
+			DrawNumber  4, SmallFont, Red, Health, alignment(center), 63, -28;
+			}
+		} // CENTER + BOOM
+	}
+
+// Armor (51 -12) //////////////////////////////////////////////////////////////
+ifCvarInt sthud_hpap_centered, 0 , equal {
+		ifCvarInt sthud_boom_colors, 0, equal {
+		DrawNumber  4, SmallFont, untranslated, Armor, alignment(left), 51, -12;
+		} else // RIGHT + NO BOOM
+		ifCvarInt sthud_boom_colors, 1, equal {
+		InInventory BasicArmor, 101 {
+			DrawNumber  4, SmallFont, Blue, Armor, alignment(left), 51, -12;
+			} else InInventory BasicArmor, 51 {
+			DrawNumber  4, SmallFont, Green, Armor, alignment(left), 51, -12;
+			} else InInventory BasicArmor, 26 {
+			DrawNumber  4, SmallFont, Gold, Armor, alignment(left), 51, -12;
+			} else {
+			DrawNumber  4, SmallFont, Red, Armor, alignment(left), 51, -12;
+			}
+		} // RIGHT + BOOM
+	} else
+ifCvarInt sthud_hpap_centered, 1 , equal {
+		ifCvarInt sthud_boom_colors, 0 , equal {
+		DrawNumber  4, SmallFont, untranslated, Armor, alignment(center), 63, -12;
+		} else // CENTER + NO BOOM
+		ifCvarInt sthud_boom_colors, 1, equal {
+		InInventory BasicArmor, 101 {
+			DrawNumber  4, SmallFont, Blue, Armor, alignment(center), 63, -12;
+			} else inInventory BasicArmor, 51 {
+			DrawNumber  4, SmallFont, Green, Armor, alignment(center), 63, -12;
+			} else InInventory BasicArmor, 26 {
+			DrawNumber  4, SmallFont, Gold, Armor, alignment(center), 63, -12;
+			} else {
+			DrawNumber  4, SmallFont, Red, Armor, alignment(center), 63, -12;
+			}
+		} // CENTER + BOOM
+	}
+	
+ifCvarInt sthud_armor_absoption, 1, equal {
+	ifCvarInt sthud_barless, 0, equal {
+		DrawNumber  2, INDEXFONT, Gold, SavePercent, alignment(center), whennotzero, 86, -9;
+	} else
+	ifCvarInt sthud_barless, 1, equal {
+		DrawNumber  2, INDEXFONT, Green, SavePercent, alignment(center), whennotzero, 42, -12;
+	}
+}
+
+// Mugshot & Inventory /////////////////////////////////////////////////////////
+ifCvarInt sthud_inventory, 0 , equal {
+	DrawMugShot 5 , 0 , -32  ;
+} else
+ifCvarInt sthud_inventory, 1, equal {
+	InventoryBarNotVisible {
+		DrawSelectedInventory AlternateOnEmpty, AlwaysShowCounter, INDEXFONT, 0, -32, 30, -8, untranslated {
+			DrawMugShot 5 , 0 , -32  ; }
+		}
+	}
+else ifCvarInt sthud_inventory, 2, equal {
+	DrawMugShot 5 , 0 , -32  ;
+	DrawSelectedInventory AlwaysShowCounter, INDEXFONT, 0, -64, 30, -40, untranslated;
+}
+
+
+
+// AMMO ////////////////////////////////////////////////////////////////////////
+ifCvarInt sthud_ammo_centered, 0 , equal {
+	UsesSecondaryAmmo {
+		ifCvarInt sthud_swap_ammo, 0, equal {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -29;
+			DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -16;
+			} else ifCvarInt sthud_swap_ammo, 1, equal {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(right), -2, -29;
+			DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -16;
+			}
+		} else UsesAmmo {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -29;
+		}
+	} else ifCvarInt sthud_ammo_centered, 1, equal {
+	UsesSecondaryAmmo {
+		ifCvarInt sthud_swap_ammo, 0, equal {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -29;
+			DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -16;
+		} else ifCvarInt sthud_swap_ammo, 1, equal {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(center), -23, -29;
+			DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -16;
+		}
+	} else UsesAmmo {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -29;
+	}
+}
+
+// KEYS ////////////////////////////////////////////////////////////////////////
+		DrawKeyBar 6, vertical, 10, 95, -29, 0, 3, 12;
+		
+// LEVEL INFO //////////////////////////////////////////////////////////////////
+
+// %
+ifCvarInt sthud_levelinfo, 1 , equal {
+	ifCvarInt sthud_li_time, 1 , equal {
+		DrawImage "TIME",  2  ,  2  ;
+		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
+	}
+	DrawImage "STATS1",  2  ,  8 ;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 51, alignment(right), 36, 8;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 52, alignment(right), 36, 14;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 53, alignment(right), 36, 20;
+	ifCvarInt sthud_li_score, 1 , equal {
+		DrawImage "SCORE",  2  , 26 ;
+		DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
+	}
+} else
+
+// LEFT
+ifCvarInt sthud_levelinfo, 2 , equal {
+	ifCvarInt sthud_li_time, 1 , equal {
+		DrawImage "TIME",  2  ,  2  ;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 54, alignment(left), 42, 8 ;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 55, alignment(left), 42, 14;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 56, alignment(left), 42, 20;
+		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
+	}
+	DrawImage "STATS2",  2  ,  8 ;
+	ifCvarInt sthud_li_score, 1 , equal {
+		DrawImage "SCORE",  2  , 26 ;
+		DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
+	}
+} else
+// FULL
+ifCvarInt sthud_levelinfo, 3 , equal {
+	ifCvarInt sthud_li_time, 1 , equal {
+		DrawImage  "TIME",  2  ,  2  ;
+		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
+	}
+	DrawImage "STATS3",  2  ,  8 ;
+	DrawNumber  4, INDEXFONT, untranslated, kills   , alignment(right), 40,  8;
+	DrawNumber  4, INDEXFONT, untranslated, items   , alignment(right), 40, 14;
+	DrawNumber  4, INDEXFONT, untranslated, secrets , alignment(right), 40, 20;
+	DrawString INDEXFONT, untranslated, "/", 42, 8, 0, alignment(left);
+	DrawString INDEXFONT, untranslated, "/", 42, 14, 0, alignment(left);
+	DrawString INDEXFONT, untranslated, "/", 42, 20, 0, alignment(left);
+	DrawNumber  4, INDEXFONT, untranslated, monsters     , alignment(left), 48,  8;
+	DrawNumber  4, INDEXFONT, untranslated, totalItems   , alignment(left), 48, 14;
+	DrawNumber  4, INDEXFONT, untranslated, totalSecrets , alignment(left), 48, 20;
+	ifCvarInt sthud_li_score, 1 , equal {
+		DrawImage "SCORE",  2  , 26 ;
+		DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
+	}
+}
+}

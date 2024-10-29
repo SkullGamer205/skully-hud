@@ -1,0 +1,22 @@
+[enu eng en default]
+
+SKULLY_HUD_TITLE    = "Skully HUD Settings"			;
+SKULLY_HUD_VERSION  = "v2024.10.27"					;
+SKULLY_BARLESS_HUD  = "Barless Mode"					;
+SKULLY_CENTER_HPAP  = "Center Health / Armor value"	;
+SKULLY_ARMOR_ABSOR = "Show armor absorption"			;
+SKULLY_CENTER_AMMO  = "Center Ammo value"			;
+// SKULLY_PERCENTAGES = "Show perventages"				;
+SKULLY_SWAP_AMMO    = "Swap alt. Ammo"				;
+SKULLY_INVENTORY    = "Inventory"					;
+SKULLY_INV_TYPE0    = "Disabled"						;
+SKULLY_INV_TYPE1    = "Replace Mugshot"				;
+SKULLY_INV_TYPE2    = "Above Mugshot"				;
+SKULLY_LEVELINFO    = "Level info"					;
+SKULLY_LI_TYPE0     = "Disabled"						;
+SKULLY_LI_TYPE1     = "[Short] Perventages"			;
+SKULLY_LI_TYPE2     = "[Short] Left"					;
+SKULLY_LI_TYPE3     = "[Full] Current/All"			;
+SKULLY_TIME		    = "Show time"					;
+SKULLY_SHOWSCORE    = "Show score"					;
+SKULLY_BOOM_COLORS  = "Boom colors"					;

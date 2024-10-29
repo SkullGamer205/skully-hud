@@ -1,0 +1,38 @@
+AddOptionMenu HUDOptions       { SubMenu "$SKULLY_HUD_TITLE", ST_MENU }
+
+OptionMenu ST_MENU
+{
+	Title "$SKULLY_HUD_TITLE"
+	StaticText "$SKULLY_HUD_VERSION", Black
+	StaticText ""
+	StaticText ""
+	Option "$SKULLY_BARLESS_HUD", sthud_barless			, OnOff
+	Option "$SKULLY_CENTER_HPAP", sthud_hpap_centered	, OnOff
+	Option "$SKULLY_ARMOR_ABSOR", sthud_armor_absoption	, OnOff
+	Option "$SKULLY_CENTER_AMMO", sthud_ammo_centered	, OnOff
+//	Option "$SKULLY_PERCENTAGES", sthud_percentages		, OnOff
+	Option "$SKULLY_SWAP_AMMO"  , sthud_swap_ammo		, OnOff
+	Option "$SKULLY_INVENTORY"	, sthud_inventory		, sthud_inv_type
+	Option "$SKULLY_LEVELINFO"	, sthud_levelinfo		, sthud_li_type
+	Option "$SKULLY_TIME"		, sthud_li_time			, OnOff
+	Option "$SKULLY_SHOWSCORE"  , sthud_li_score		, OnOff
+	
+	
+	Option "$SKULLY_BOOM_COLORS", sthud_boom_colors		, OnOff
+}
+
+OptionValue sthud_inv_type
+{
+	0, "$SKULLY_INV_TYPE0"
+	1, "$SKULLY_INV_TYPE1"
+	2, "$SKULLY_INV_TYPE2"
+}
+
+OptionValue sthud_li_type
+{
+	0, "$SKULLY_LI_TYPE0"
+	1, "$SKULLY_LI_TYPE1"
+	2, "$SKULLY_LI_TYPE2"
+	3, "$SKULLY_LI_TYPE3"
+}
+
