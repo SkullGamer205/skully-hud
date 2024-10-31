@@ -37,7 +37,7 @@ Skully HUD
 ### Скриншоты
 <details open>
 <summary>Обзор по частям</summary>
-<br>
+
 ![Сам HUD в действии](.screenshots/01.png)
 
 ![Поддержка пользовательских STBAR](.screenshots/03.png)
@@ -49,7 +49,7 @@ Skully HUD
 
 <details open>
 <summary>Обзор в бою</summary>
-<br>
+
 ![Screenshot](.screenshots/18.png)
 ![Screenshot](.screenshots/17.png)
 ![Screenshot](.screenshots/16.png)
