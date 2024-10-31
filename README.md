@@ -1,4 +1,4 @@
-|[Русский](README-RU.md) | [English](README.md)|
+|[🇷🇺 Русский](README-RU.md) | [🇬🇧 English](README.md)|
 |-|-|
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
@@ -44,7 +44,7 @@ Skully HUD
 
 ![Режим "Без STBAR"](.screenshots/05.png)
 
-![Информация об уровне](.screenshots/02.png) ![Поддержка множества видов ключей](./screenshots/04.png)
+![Информация об уровне](.screenshots/02.png) ![Поддержка множества видов ключей](.screenshots/04.png)
 </details>
 
 <details open>

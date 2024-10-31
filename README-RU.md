@@ -1,4 +1,4 @@
-|[Русский](README-RU.md) | [English](README.md)|
+|[🇷🇺 Русский](README-RU.md) | [🇬🇧 English](README.md)|
 |-|-|
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
@@ -8,47 +8,47 @@
 <p align="center"><b>
 Skully HUD
 </b></p>
-<p align="center">HUD для Doom, основанный на <a href="https://doomwiki.org/wiki/Status_bar"><alt="STBAR">STBAR</a> , с возможностью переключения некоторых настроек, а также вдохновлённый такими проектами, как: <a href="https://www.moddb.com/games/doom/addons/zdexiums-minimalist-hud"><alt="Zdexium's Minimalist HUD">Zdexium's Minimalist HUD</a>, <a href="https://forum.zdoom.org/viewtopic.php?t=63863"><alt="Fullscreen Statusbar Mod">Fullscreen Statusbar Mod</a>, и <a href="https://forum.zdoom.org/viewtopic.php?t=71298"><alt="FD HUD">FD HUD</a>.</p>
+<p align="center">HUD based on <a href="https://doomwiki.org/wiki/Status_bar"><alt="STBAR">STBAR</a> with switching some options, and also inspired on <a href="https://www.moddb.com/games/doom/addons/zdexiums-minimalist-hud"><alt="Zdexium's Minimalist HUD">Zdexium's Minimalist HUD</a>, <a href="https://forum.zdoom.org/viewtopic.php?t=63863"><alt="Fullscreen Statusbar Mod">Fullscreen Statusbar Mod</a>, and <a href="https://forum.zdoom.org/viewtopic.php?t=71298"><alt="FD HUD">FD HUD</a>.</p>
 
-### Очередной HUD для DOOM? Зачем?
-В первую очередь, я делал для себя, ибо не нашёл подходящего интерфейса, который "подстраивался" под всевозможные WAD'ы и был минималистичным. FD HUD Отнимал много места под здоровье и жизни, Zdexium был минималистичным, но не подстраивался под WAD'ы, а Fullscreen Status Bar - это fullscreen Status Bar.
-Также, я сделал этот мод, чтобы немного попрактиковаться в моддинге Doom (Можно было и попрактиковаться, сделав какой-нибудь оружейный мод и пр... , но меня и [Beautiful](https://www.moddb.com/mods/beautiful-doom-6100), [HXRTC](https://www.moddb.com/mods/hxrtc-project) и [Brutal Doom](https://www.moddb.com/mods/brutal-doom)'ы устраивают более чем).
+### Anoter HUD for DOOM? Why?
+First of all, I made it for myself, because I couldn't find a suitable interface that would "adapt" to all sorts of WADs and was minimalistic. FD HUD took up a lot of space for health and life, Zdexium was minimalistic, but didn't adapt to WADs, and Fullscreen Status Bar... is a fullscreen Status Bar.
+Also, I made this mod to practice Doom modding a little (I could have practiced by making some weapon mods, etc., but I'm more than satisfied with [Beautiful](https://www.moddb.com/mods/beautiful-doom-6100), [HXRTC](https://www.moddb.com/mods/hxrtc-project) and [Brutal Doom](https://www.moddb.com/mods/brutal-doom)s).
 
-### Совместимость
-|   Движок  |\|////\|
+### Compatibility
+|   Engine  |\|////\|
 |:---------:|:-:|
 | GZDoom    | ✅ |
 | Zandronum | ❌<sup>[1]</sup>|
 
-[1] В ближайшее время *(Возможно перед Release версией)* я сделаю поддержку. (См. #1)
+[1] In the nearest future *(Possibly before the Release version)* I will make support. (See #1)
 
-### Список настроек
-* **Скрыть STBAR** (Скрывает Background у интерфейса) (Также отображает вместо надписей "здоровье" и "броня" соответствующие иконки)
-* **Центрировать здоровье / броню** (Переключить выравнивание с левого края в центр)
-* **Отображать поглощение брони** (Отображает процент поглощения урона бронёй справа от брони)
-* **Центрировать патроны** (Переключить выравнивание с правого края в центр)
-* **Поменять местами индикаторы патронов** (Меняет местами Ammo1 и Ammo2 (Это полезно для некоторых модификаций) )
-* **Инвентарь** (Переключает отображение текущего слота инвентаря: Отключён, вместо лица, выше лица)
-* **Информация об уровне** (Переключает отображение информации об уровне (Время, убийства, предметы, секреты, очки): отключена, краткая, полная)
-* **Отображать секундомер** (Время уровня)
-* **Отображать очки** (Полезно для мода [Lazy Points](https://forum.zdoom.org/viewtopic.php?t=66565) и различных аркадных модов)
-* **Цвета из Boom** (Делает цифры более цветными)
+### List options
+* **Barless Mode** (Hides the Background of the interface) (Also displays the corresponding icons instead of the "health" and "armor" text)
+* **Center health / armor value** (Toggle alignment from left edge to center)
+* **Show armor absorption** (Shows the percentage of damage absorption by armor to the right of the armor)
+* **Center ammo value** (Toggle alignment from right edge to center)
+* **Swap alt. Ammo** (Swaps Ammo1 and Ammo2 (This is useful for some mods) )
+* **Inventory** (Toggles the display of the current inventory slot: Disabled, Replace Mugshot, Above Mugshot)
+* **Level info** (Toggles the display of level information (Time, Kills, Items, Secrets, Points): Disabled, Brief, Full)
+* **Show Time** (Level Time)
+* **Show score** (Useful for the [Lazy Points](https://forum.zdoom.org/viewtopic.php?t=66565) mod and various arcade mods)
+* **Boom colors** (Makes the numbers more colorful)
 
-### Скриншоты
+### Screenshots
 <details open>
-<summary>Обзор по частям</summary>
+<summary>Detailed Review</summary>
 
-![Сам HUD в действии](.screenshots/01.png)
+![HUD in action](.screenshots/01.png)
 
-![Поддержка пользовательских STBAR](.screenshots/03.png)
+![Custom STBAR compatibility](.screenshots/03.png)
 
-![Режим "Без STBAR"](.screenshots/05.png)
+![Barless mode](.screenshots/05.png)
 
-![Информация об уровне](.screenshots/02.png) ![Поддержка множества видов ключей](./screenshots/04.png)
+![Level info](.screenshots/02.png) ![Custom keys compatibility](.screenshots/04.png)
 </details>
 
 <details open>
-<summary>Обзор в бою</summary>
+<summary>Review "on the battlefield"ю</summary>
 
 ![Screenshot](.screenshots/18.png)
 ![Screenshot](.screenshots/17.png)
@@ -65,13 +65,13 @@ Skully HUD
 ![Screenshot](.screenshots/06.png)
 </details>
 
-### Установить
+### Install
 * [Pre-release](https://github.com/SkullGamer205/skully-hud/releases/tag/Pre-release)
 ****
 
-### Лицензия
+## License
 
-Этот проект находится под лицензией [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
+This project is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
