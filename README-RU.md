@@ -38,31 +38,31 @@ Skully HUD
 <details open>
 <summary>Обзор по частям</summary>
 <br>
-![Сам HUD в действии](./screenshots/01.png)
+![Сам HUD в действии](.screenshots/01.png)
 
-![Поддержка пользовательских STBAR](./screenshots/03.png)
+![Поддержка пользовательских STBAR](.screenshots/03.png)
 
-![Режим "Без STBAR"](./screenshots/05.png)
+![Режим "Без STBAR"](.screenshots/05.png)
 
-![Информация об уровне](./screenshots/02.png) ![Поддержка множества видов ключей](./screenshots/04.png)
+![Информация об уровне](.screenshots/02.png) ![Поддержка множества видов ключей](./screenshots/04.png)
 </details>
 
 <details open>
 <summary>Обзор в бою</summary>
 <br>
-![Screenshot](./screenshots/18.png)
-![Screenshot](./screenshots/17.png)
-![Screenshot](./screenshots/16.png)
-![Screenshot](./screenshots/10.png)
-![Screenshot](./screenshots/09.png)
-![Screenshot](./screenshots/13.png)
-![Screenshot](./screenshots/12.png)
-![Screenshot](./screenshots/11.png)
-![Screenshot](./screenshots/15.png)
-![Screenshot](./screenshots/14.png)
-![Screenshot](./screenshots/08.png)
-![Screenshot](./screenshots/07.png)
-![Screenshot](./screenshots/06.png)
+![Screenshot](.screenshots/18.png)
+![Screenshot](.screenshots/17.png)
+![Screenshot](.screenshots/16.png)
+![Screenshot](.screenshots/10.png)
+![Screenshot](.screenshots/09.png)
+![Screenshot](.screenshots/13.png)
+![Screenshot](.screenshots/12.png)
+![Screenshot](.screenshots/11.png)
+![Screenshot](.screenshots/15.png)
+![Screenshot](.screenshots/14.png)
+![Screenshot](.screenshots/08.png)
+![Screenshot](.screenshots/07.png)
+![Screenshot](.screenshots/06.png)
 </details>
 
 ### Установить
