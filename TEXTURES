@@ -58,3 +58,57 @@ Graphic "STAMMO", 46, 32
 {
 	Patch "STBAR", 0, 0
 }
+
+Graphic "STAMMOS", 71, 32
+{
+	Patch "STBAR", -249, 0
+}
+
+// Clips
+Graphic CLIPICON, 32, 32
+{
+	XScale 2.0
+	YScale 2.0
+
+	Patch CLIPA0, 0, 0
+	{
+		
+	}
+}
+
+// Shells
+Graphic SHELICON, 32, 32
+{
+	XScale 2.0
+	YScale 2.0
+
+	Patch SHELA0, 0, 0
+	{
+
+	}
+}
+
+// Rockets
+Graphic RCKTICON, 32, 32
+{
+	XScale 2.0
+	YScale 2.0
+
+	Patch ROCKA0, 0, 0
+	{
+		FlipX
+		Rotate 270
+	}
+}
+
+// Cells
+Graphic CELLICON, 32, 32
+{
+	XScale 2.0
+	YScale 2.0
+
+	Patch CELLA0, 0, 0
+	{
+
+	}
+}

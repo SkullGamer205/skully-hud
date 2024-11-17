@@ -6,19 +6,20 @@ OptionMenu ST_MENU
 	StaticText "$SKULLY_HUD_VERSION", Black
 	StaticText ""
 	StaticText ""
-	Option "$SKULLY_BARLESS_HUD", sthud_barless			, OnOff
-	Option "$SKULLY_CENTER_HPAP", sthud_hpap_centered	, OnOff
-	Option "$SKULLY_ARMOR_ABSOR", sthud_armor_absoption	, OnOff
-	Option "$SKULLY_CENTER_AMMO", sthud_ammo_centered	, OnOff
+	Option "$SKULLY_BARLESS_HUD"	, sthud_barless			, OnOff
+	Option "$SKULLY_CENTER_HPAP"	, sthud_hpap_centered	, OnOff
+	Option "$SKULLY_ARMOR_ABSOR"	, sthud_armor_absoption	, OnOff
+	Option "$SKULLY_CENTER_AMMO"	, sthud_ammo_centered	, OnOff
 //	Option "$SKULLY_PERCENTAGES", sthud_percentages		, OnOff
-	Option "$SKULLY_SWAP_AMMO"  , sthud_swap_ammo		, OnOff
-	Option "$SKULLY_INVENTORY"	, sthud_inventory		, sthud_inv_type
-	Option "$SKULLY_LEVELINFO"	, sthud_levelinfo		, sthud_li_type
-	Option "$SKULLY_TIME"		, sthud_li_time			, OnOff
-	Option "$SKULLY_SHOWSCORE"  , sthud_li_score		, OnOff
+	Option "$SKULLY_SHOW_ALL_AMMOS"	, sthud_show_ammos		, OnOff
+	Option "$SKULLY_SWAP_AMMO"  	, sthud_swap_ammo		, OnOff
+	Option "$SKULLY_INVENTORY"		, sthud_inventory		, sthud_inv_type
+	Option "$SKULLY_LEVELINFO"		, sthud_levelinfo		, sthud_li_type
+	Option "$SKULLY_TIME"			, sthud_li_time			, OnOff
+	Option "$SKULLY_SHOWSCORE"  	, sthud_li_score		, OnOff
 	
 	
-	Option "$SKULLY_BOOM_COLORS", sthud_boom_colors		, OnOff
+	Option "$SKULLY_BOOM_COLORS"	, sthud_boom_colors		, OnOff
 }
 
 OptionValue sthud_inv_type

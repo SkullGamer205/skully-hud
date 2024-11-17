@@ -21,6 +21,10 @@ inInventory PowerStrength {
 }
 // Bottom Right
 	Drawimage "STAMMO"   , -46  , -32  ;
+	
+	ifCvarInt sthud_show_ammos, 1, equal {
+		Drawimage "STAMMOS"   , -117  , -32  ;
+	}
 }
 
 // STBAR'less Modules
@@ -40,6 +44,16 @@ ifCvarInt sthud_barless, 1, equal {
 	} else UsesAmmo {
 	Drawimage "AMMO"     , -38  , -9 ;	
 	}
+// Ammos /////////////
+
+	ifCvarInt sthud_show_ammos, 1, equal {
+		DrawImage "AMMOS", -102, -27;
+		DrawImage "LINE", -75, -27;
+		DrawImage "LINE", -75, -21;
+		DrawImage "LINE", -75, -15;
+		DrawImage "LINE", -75, -9;
+		
+	}
 }
 
 // Weapon Slots ////////////////////////////////////////////////////////////////
@@ -54,6 +68,20 @@ DrawSwitchableImage  WeaponSlot 6 , "STGNUM6" , "STYSNUM6" ,  -19 , -38 ;
 DrawSwitchableImage  WeaponSlot 7 , "STGNUM7" , "STYSNUM7" ,  -15 , -38 ;
 DrawSwitchableImage  WeaponSlot 8 , "STGNUM8" , "STYSNUM8" ,  -11 , -38 ;
 DrawSwitchableImage  WeaponSlot 9 , "STGNUM9" , "STYSNUM9" ,  -7  , -38 ;
+
+// All Ammos ///////////////////////////////////////////////////////////////////
+
+ifCvarInt sthud_show_ammos, 1, equal {
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, Clip, alignment(right), -78, -27;
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, Shell, alignment(right), -78, -21;
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, RocketAmmo, alignment(right), -78, -15;
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, Cell, alignment(right), -78, -9;
+
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Clip), alignment(right), -52, -27;
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Shell), alignment(right), -52, -21;
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(RocketAmmo), alignment(right), -52, -15;
+	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Cell), alignment(right), -52, -9;
+}
 
 // Health (51 -28) /////////////////////////////////////////////////////////////
 ifCvarInt sthud_hpap_centered, 0, equal {

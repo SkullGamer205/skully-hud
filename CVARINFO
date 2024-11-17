@@ -3,6 +3,7 @@ user int sthud_hpap_centered	= 0; // Centered HP/AP
 user int sthud_armor_absoption	= 0; // Armor Absorption
 user int sthud_ammo_centered	= 0; // Centered AMMO
 user int sthud_swap_ammo		= 0; // Swap ammo
+user int sthud_show_ammos		= 1; // Show all ammo in inventory (Doom)
 // user int sthud_percentages 	 = 0; // Show Percentages
 user int sthud_boom_colors		= 0; // Boom Colors
 user int sthud_inventory		= 1; // Inventory type
