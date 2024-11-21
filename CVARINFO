@@ -10,3 +10,4 @@ user int sthud_inventory		= 1; // Inventory type
 user int sthud_levelinfo		= 2; // Level Info
 user int sthud_li_time			= 1; // Time
 user int sthud_li_score			= 0; // Score
+user int sthud_li_frags			= 0; // Frags

@@ -1,7 +1,7 @@
 [enu eng en default]
 
 SKULLY_HUD_TITLE    	= "Skully HUD Settings"			;
-SKULLY_HUD_VERSION  	= "v2024.11.17"					;
+SKULLY_HUD_VERSION  	= "v2024.11.21"					;
 SKULLY_BARLESS_HUD  	= "Barless Mode"				;
 SKULLY_CENTER_HPAP  	= "Center Health / Armor value"	;
 SKULLY_ARMOR_ABSOR 		= "Show armor absorption"		;
@@ -20,4 +20,11 @@ SKULLY_LI_TYPE2     	= "[Short] Left"				;
 SKULLY_LI_TYPE3     	= "[Full] Current/All"			;
 SKULLY_TIME		    	= "Show time"					;
 SKULLY_SHOWSCORE    	= "Show score"					;
+SKULLY_SCORE_TYPE0		= "No"							;
+SKULLY_SCORE_TYPE1		= "Only on Cooperative"			;
+SKULLY_SCORE_TYPE2		= "Yes"							;
+SKULLY_SHOWFRAGS   		= "Show frags"					;
+SKULLY_FRAGS_TYPE0		= "No"							;
+SKULLY_FRAGS_TYPE1		= "Only on Deathmatch"			;
+SKULLY_FRAGS_TYPE2		= "Yes"							;
 SKULLY_BOOM_COLORS  	= "Boom colors"					;

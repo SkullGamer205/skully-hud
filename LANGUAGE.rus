@@ -1,11 +1,11 @@
 [rus ru]
 
-SKULLY_HUD_TITLE   		= " Настройки Skully HUD"					;
+SKULLY_HUD_TITLE   		= "Настройки Skully HUD"					;
 SKULLY_BARLESS_HUD 		= "Скрыть STBAR"							;
 SKULLY_CENTER_HPAP 		= "Центрировать здоровье / броню"			;
 SKULLY_ARMOR_ABSOR 		= "Отображать поглощение брони"				;
 SKULLY_CENTER_AMMO 		= "Центрировать патроны"					;
-SKULLY_SHOW_ALL_AMMOS	= "Отображать всё патроны"					;
+SKULLY_SHOW_ALL_AMMOS	= "Отображать все патроны"					;
 SKULLY_PERCENTAGES 		= "Показывать проценты"						;
 SKULLY_SWAP_AMMO   		= "Поменять местами индикаторы патронов"	;
 SKULLY_INVENTORY   		= "Инвентарь"								;
@@ -19,4 +19,11 @@ SKULLY_LI_TYPE2    		= "[Краткая] Оставшиеся"					;
 SKULLY_LI_TYPE3    		= "[Полная] Текущее/Обшее"					;
 SKULLY_TIME		   		= "Отображать секундомер"					;
 SKULLY_SHOWSCORE   		= "Отображать очки"							;
+SKULLY_SCORE_TYPE0		= "Нет"										;
+SKULLY_SCORE_TYPE1		= "Только в кооперативе"					;
+SKULLY_SCORE_TYPE2		= "Да"										;
+SKULLY_SHOWFRAGS   		= "Отображать фраги"						;
+SKULLY_FRAGS_TYPE0		= "нет"										;
+SKULLY_FRAGS_TYPE1		= "Только в боях на смерть"					;
+SKULLY_FRAGS_TYPE2		= "Да"										;
 SKULLY_BOOM_COLORS 		= "Цвета из Boom"							;

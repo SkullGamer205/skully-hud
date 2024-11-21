@@ -1,0 +1,244 @@
+#library "cvars"
+#include "zcommon.acs"
+
+Script "SkullyHUD_Barless" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_barless") == 1)
+		{
+			GiveInventory("STHUD_Barless", 1);
+		}
+		
+		else if(GetCVar("sthud_barless") == 0)
+		{
+			TakeInventory("STHUD_Barless", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_HPAP_Centered" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_hpap_centered") == 1)
+		{
+			GiveInventory("STHUD_HPAP_Centered", 1);
+		}
+		
+		else if(GetCVar("sthud_hpap_centered") == 0)
+		{
+			TakeInventory("STHUD_HPAP_Centered", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_Armor_Absoption" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_armor_absoption") == 1)
+		{
+			GiveInventory("STHUD_Armor_Absoption", 1);
+		}
+		
+		else if(GetCVar("sthud_armor_absoption") == 0)
+		{
+			TakeInventory("STHUD_Armor_Absoption", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_Ammo_Centered" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_ammo_centered") == 1)
+		{
+			GiveInventory("STHUD_Ammo_Centered", 1);
+		}
+		
+		else if(GetCVar("sthud_ammo_centered") == 0)
+		{
+			TakeInventory("STHUD_Ammo_Centered", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_Swap_Ammo" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_swap_ammo") == 1)
+		{
+			GiveInventory("STHUD_Swap_Ammo", 1);
+		}
+		
+		else if(GetCVar("sthud_swap_ammo") == 0)
+		{
+			TakeInventory("STHUD_Swap_Ammo", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_Show_Ammos" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_show_ammos") == 1)
+		{
+			GiveInventory("STHUD_Show_Ammos", 1);
+		}
+		
+		else if(GetCVar("sthud_show_ammos") == 0)
+		{
+			TakeInventory("STHUD_Show_Ammos", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_Boom_Colors" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_boom_colors") == 1)
+		{
+			GiveInventory("STHUD_Boom_Colors", 1);
+		}
+		
+		else if(GetCVar("sthud_boom_colors") == 0)
+		{
+			TakeInventory("STHUD_Boom_Colors", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_Inventory" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_inventory") == 0)
+		{
+			GiveInventory("STHUD_Inventory0", 1);
+			TakeInventory("STHUD_Inventory1", 1);
+			TakeInventory("STHUD_Inventory2", 1);
+		}
+		 if(GetCVar("sthud_inventory") == 1)
+		{
+			TakeInventory("STHUD_Inventory0", 1);
+			GiveInventory("STHUD_Inventory1", 1);
+			TakeInventory("STHUD_Inventory2", 1);
+		}
+		 if(GetCVar("sthud_inventory") == 2)
+		{
+			TakeInventory("STHUD_Inventory0", 1);
+			TakeInventory("STHUD_Inventory1", 1);
+			GiveInventory("STHUD_Inventory2", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_LevelInfo" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_levelinfo") == 0)
+		{
+			TakeInventory("STHUD_LevelInfo1", 1);
+			TakeInventory("STHUD_LevelInfo2", 1);
+			TakeInventory("STHUD_LevelInfo3", 1);
+		}
+		 if(GetCVar("sthud_levelinfo") == 1)
+		{
+			GiveInventory("STHUD_LevelInfo1", 1);
+			TakeInventory("STHUD_LevelInfo2", 1);
+			TakeInventory("STHUD_LevelInfo3", 1);
+		}
+		 if(GetCVar("sthud_levelinfo") == 2)
+		{
+			TakeInventory("STHUD_LevelInfo1", 1);
+			GiveInventory("STHUD_LevelInfo2", 1);
+			TakeInventory("STHUD_LevelInfo3", 1);
+		}
+		 if(GetCVar("sthud_levelinfo") == 3)
+		{
+			TakeInventory("STHUD_LevelInfo1", 1);
+			TakeInventory("STHUD_LevelInfo2", 1);
+			GiveInventory("STHUD_LevelInfo3", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_LevelInfo_Score" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_li_score") == 0)
+		{
+			TakeInventory("STHUD_LI_Score1", 1);
+			TakeInventory("STHUD_LI_Score2", 1);
+		}
+		if(GetCVar("sthud_li_score") == 1)
+		{
+			GiveInventory("STHUD_LI_Score1", 1);
+			TakeInventory("STHUD_LI_Score2", 1);
+		}
+		if(GetCVar("sthud_li_score") == 2)
+		{
+			TakeInventory("STHUD_LI_Score1", 1);
+			GiveInventory("STHUD_LI_Score2", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_LevelInfo_Frags" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_li_frags") == 0)
+		{
+			TakeInventory("STHUD_LI_Frags1", 1);
+			TakeInventory("STHUD_LI_Frags2", 1);
+		}
+		if(GetCVar("sthud_li_frags") == 1)
+		{
+			GiveInventory("STHUD_LI_Frags1", 1);
+			TakeInventory("STHUD_LI_Frags2", 1);
+		}
+		if(GetCVar("sthud_li_frags") == 2)
+		{
+			TakeInventory("STHUD_LI_Frags1", 1);
+			GiveInventory("STHUD_LI_Frags2", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_LevelInfo_Time" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_li_time") == 1)
+		{
+			GiveInventory("STHUD_LI_Time", 1);
+		}
+		
+		else if(GetCVar("sthud_li_time") == 0)
+		{
+			TakeInventory("STHUD_LI_Time", 1);
+		}
+		Delay(25);
+	}
+}
+
+

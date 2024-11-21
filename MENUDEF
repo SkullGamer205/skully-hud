@@ -1,35 +1,33 @@
-AddOptionMenu HUDOptions       { SubMenu "$SKULLY_HUD_TITLE", ST_MENU }
-
-OptionMenu ST_MENU
+OptionMenu "ST_MENU"
 {
 	Title "$SKULLY_HUD_TITLE"
-	StaticText "$SKULLY_HUD_VERSION", Black
-	StaticText ""
-	StaticText ""
-	Option "$SKULLY_BARLESS_HUD"	, sthud_barless			, OnOff
-	Option "$SKULLY_CENTER_HPAP"	, sthud_hpap_centered	, OnOff
-	Option "$SKULLY_ARMOR_ABSOR"	, sthud_armor_absoption	, OnOff
-	Option "$SKULLY_CENTER_AMMO"	, sthud_ammo_centered	, OnOff
-//	Option "$SKULLY_PERCENTAGES", sthud_percentages		, OnOff
-	Option "$SKULLY_SHOW_ALL_AMMOS"	, sthud_show_ammos		, OnOff
-	Option "$SKULLY_SWAP_AMMO"  	, sthud_swap_ammo		, OnOff
-	Option "$SKULLY_INVENTORY"		, sthud_inventory		, sthud_inv_type
-	Option "$SKULLY_LEVELINFO"		, sthud_levelinfo		, sthud_li_type
-	Option "$SKULLY_TIME"			, sthud_li_time			, OnOff
-	Option "$SKULLY_SHOWSCORE"  	, sthud_li_score		, OnOff
+	StaticText "$SKULLY_HUD_VERSION", 1
+	StaticText " "
+	StaticText " "
+	Option "$SKULLY_BARLESS_HUD"	, "sthud_barless"			, "ONOFF"
+	Option "$SKULLY_CENTER_HPAP"	, "sthud_hpap_centered"		, "ONOFF"
+	Option "$SKULLY_ARMOR_ABSOR"	, "sthud_armor_absoption"	, "ONOFF"
+	Option "$SKULLY_CENTER_AMMO"	, "sthud_ammo_centered"		, "ONOFF"
+//	Option "$SKULLY_PERCENTAGES"	, "sthud_percentages"		, "ONOFF"
+	Option "$SKULLY_SHOW_ALL_AMMOS"	, "sthud_show_ammos"		, "ONOFF"
+	Option "$SKULLY_SWAP_AMMO"  	, "sthud_swap_ammo"			, "ONOFF"
+	Option "$SKULLY_INVENTORY"		, "sthud_inventory"			, "sthud_inv_type"
+	Option "$SKULLY_LEVELINFO"		, "sthud_levelinfo"			, "sthud_li_type"
+	Option "$SKULLY_TIME"			, "sthud_li_time"			, "ONOFF"
+	Option "$SKULLY_SHOWSCORE"  	, "sthud_li_score"			, "sthud_score_type"
+	Option "$SKULLY_SHOWFRAGS"  	, "sthud_li_frags"			, "sthud_frags_type"
 	
-	
-	Option "$SKULLY_BOOM_COLORS"	, sthud_boom_colors		, OnOff
+	Option "$SKULLY_BOOM_COLORS"	, "sthud_boom_colors"		, "ONOFF"
 }
 
-OptionValue sthud_inv_type
+OptionValue "sthud_inv_type"
 {
 	0, "$SKULLY_INV_TYPE0"
 	1, "$SKULLY_INV_TYPE1"
 	2, "$SKULLY_INV_TYPE2"
 }
 
-OptionValue sthud_li_type
+OptionValue "sthud_li_type"
 {
 	0, "$SKULLY_LI_TYPE0"
 	1, "$SKULLY_LI_TYPE1"
@@ -37,3 +35,16 @@ OptionValue sthud_li_type
 	3, "$SKULLY_LI_TYPE3"
 }
 
+OptionValue "sthud_score_type"
+{
+	0, "$SKULLY_SCORE_TYPE0"
+	1, "$SKULLY_SCORE_TYPE1"
+	2, "$SKULLY_SCORE_TYPE2"
+}
+
+OptionValue "sthud_frags_type"
+{
+	0, "$SKULLY_FRAGS_TYPE0"
+	1, "$SKULLY_FRAGS_TYPE1"
+	2, "$SKULLY_FRAGS_TYPE2"
+}
