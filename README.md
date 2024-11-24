@@ -18,9 +18,7 @@ Also, I made this mod to practice Doom modding a little (I could have practiced 
 |   Engine  |\|////\|
 |:---------:|:-:|
 | GZDoom    | ✅ |
-| Zandronum | ❌<sup>[1]</sup>|
-
-[1] In the nearest future *(Possibly before the Release version)* I will make support. (See #1)
+| Zandronum | ✅ |
 
 ### List options
 * **Barless Mode** (Hides the Background of the interface) (Also displays the corresponding icons instead of the "health" and "armor" text)
