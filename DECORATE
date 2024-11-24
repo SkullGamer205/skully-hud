@@ -4,6 +4,8 @@ ACTOR STHUD_Armor_Absoption : Inventory { Inventory.Amount 1 Inventory.MaxAmount
 ACTOR STHUD_Ammo_Centered : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
 ACTOR STHUD_Swap_Ammo : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
 ACTOR STHUD_Show_Ammos : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
+ACTOR STHUD_PowerUps1 : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
+ACTOR STHUD_PowerUps2 : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
 ACTOR STHUD_Boom_Colors : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
 ACTOR STHUD_Inventory0 : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }
 ACTOR STHUD_Inventory1 : Inventory { Inventory.Amount 1 Inventory.MaxAmount 1 }

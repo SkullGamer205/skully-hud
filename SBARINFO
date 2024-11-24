@@ -119,8 +119,8 @@ InInventory STHUD_HPAP_Centered {
 		DrawNumber  4, SmallFont, untranslated, Armor, alignment(center), 63, -12;
 		} // CENTER + NO BOOM
 		InInventory STHUD_Boom_Colors {
-			DrawNumber  4, SmallFont, Black, Armor, alignment(left), 63, -12, 0;
-			DrawNumber  4, SmallFont, Gold , Armor , WhenNotZero , alignment(left), 63, -12, 0, Red, 25, Green, 51;
+			DrawNumber  4, SmallFont, Black, Armor, alignment(center), 63, -12, 0;
+			DrawNumber  4, SmallFont, Gold , Armor , WhenNotZero , alignment(center), 63, -12, 0, Red, 25, Green, 51;
 		} // CENTER + BOOM
 	}
 
@@ -186,16 +186,40 @@ InInventory STHUD_Ammo_Centered {
 		
 // LEVEL INFO //////////////////////////////////////////////////////////////////
 
-// %
-InInventory STHUD_LevelInfo1 {
+// General
+InInventory STHUD_LevelInfo1 || STHUD_LevelInfo2  {
 	InInventory STHUD_LI_Time {
 		DrawImage "TIME",  2  ,  2  ;
 		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
 	}
-	DrawImage "STATS1",  2  ,  8 ;
-	DrawNumber 4,  INDEXFONT, untranslated, globalvar 51, alignment(right), 36, 8;
-	DrawNumber 4,  INDEXFONT, untranslated, globalvar 52, alignment(right), 36, 14;
-	DrawNumber 4,  INDEXFONT, untranslated, globalvar 53, alignment(right), 36, 20;
+	InInventory STHUD_LI_Score1 {
+		gamemode teamgame
+		{
+			DrawImage "SCORE",  2  , 26 ;
+			DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
+		}
+	}
+	InInventory STHUD_LI_Score2 {
+		DrawImage "SCORE",  2  , 26 ;
+		DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
+	}
+	InInventory STHUD_LI_Frags1 {
+		gamemode deathmatch
+		{
+			DrawImage "FRAGS",  2  , 32 ;
+			DrawNumber 99, INDEXFONT, untranslated, frags, alignment(left), 24, 32;
+		}
+	}
+	InInventory STHUD_LI_Frags2 {
+		DrawImage "FRAGS",  2  , 32 ;
+		DrawNumber 99, INDEXFONT, untranslated, frags, alignment(left), 24, 32;
+	}
+}
+InInventory STHUD_LevelInfo3 {
+	InInventory STHUD_LI_Time {
+		DrawImage "TIME",  2  ,  2  ;
+		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
+	}
 	InInventory STHUD_LI_Score1 {
 		gamemode teamgame
 		{
@@ -220,77 +244,91 @@ InInventory STHUD_LevelInfo1 {
 	}
 }
 
+// %
+InInventory STHUD_LevelInfo1 {
+	DrawImage "STATS1",  2  ,  8 ;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 51, alignment(right), 36, 8;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 52, alignment(right), 36, 14;
+	DrawNumber 4,  INDEXFONT, untranslated, globalvar 53, alignment(right), 36, 20;
+}
+
 // LEFT
 InInventory STHUD_LevelInfo2 {
-	InInventory STHUD_LI_Time {
-		DrawImage "TIME",  2  ,  2  ;
+	DrawImage "STATS2",  2  ,  8 ;
 	DrawNumber 4,  INDEXFONT, untranslated, globalvar 54, alignment(left), 42, 8 ;
 	DrawNumber 4,  INDEXFONT, untranslated, globalvar 55, alignment(left), 42, 14;
 	DrawNumber 4,  INDEXFONT, untranslated, globalvar 56, alignment(left), 42, 20;
-		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
-	}
-	DrawImage "STATS2",  2  ,  8 ;
-	InInventory STHUD_LI_Score1 {
-		gamemode teamgame
-		{
-			DrawImage "SCORE",  2  , 26 ;
-			DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
-		}
-	}
-	InInventory STHUD_LI_Score2 {
-		DrawImage "SCORE",  2  , 26 ;
-		DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
-	}
-	InInventory STHUD_LI_Frags1 {
-		gamemode deathmatch
-		{
-			DrawImage "FRAGS",  2  , 32 ;
-			DrawNumber 99, INDEXFONT, untranslated, frags, alignment(left), 24, 32;
-		}
-	}
-	InInventory STHUD_LI_Frags2 {
-		DrawImage "FRAGS",  2  , 32 ;
-		DrawNumber 99, INDEXFONT, untranslated, frags, alignment(left), 24, 32;
-	}
 } 
 // FULL
-InInventory STHUD_LevelInfo3 {
-	InInventory STHUD_LI_Time {
-		DrawImage  "TIME",  2  ,  2  ;
-		DrawString INDEXFONT, untranslated, time, 24, 2, 0, alignment(left);
-	}
-	
+InInventory STHUD_LevelInfo3 {	
 	DrawImage "STATS3",  2  ,  8 ;
-	DrawNumber  4, INDEXFONT, untranslated, kills   , alignment(right), 40,  8;
-	DrawNumber  4, INDEXFONT, untranslated, items   , alignment(right), 40, 14;
-	DrawNumber  4, INDEXFONT, untranslated, secrets , alignment(right), 40, 20;
-	DrawString INDEXFONT, untranslated, "/", 42, 8, 0, alignment(left);
-	DrawString INDEXFONT, untranslated, "/", 42, 14, 0, alignment(left);
-	DrawString INDEXFONT, untranslated, "/", 42, 20, 0, alignment(left);
+	DrawNumber  4, INDEXFONT, untranslated, kills   	 , alignment(right), 40,  8;
+	DrawNumber  4, INDEXFONT, untranslated, items   	 , alignment(right), 40, 14;
+	DrawNumber  4, INDEXFONT, untranslated, secrets 	 , alignment(right), 40, 20;
+	DrawString	   INDEXFONT, untranslated, "/"			 , 42, 8 , 0, alignment(left);
+	DrawString 	   INDEXFONT, untranslated, "/"			 , 42, 14, 0, alignment(left);
+	DrawString 	   INDEXFONT, untranslated, "/"			 , 42, 20, 0, alignment(left);
 	DrawNumber  4, INDEXFONT, untranslated, monsters     , alignment(left), 48,  8;
 	DrawNumber  4, INDEXFONT, untranslated, totalItems   , alignment(left), 48, 14;
 	DrawNumber  4, INDEXFONT, untranslated, totalSecrets , alignment(left), 48, 20;
-	InInventory STHUD_LI_Score1 {
-		gamemode teamgame
-		{
-			DrawImage "SCORE",  2  , 26 ;
-			DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
+}
+
+// EFFECTS /////////////////////////////////////////////////////////////////////
+
+InInventory STHUD_PowerUps1 {
+	InInventory NOT STHUD_Barless {
+		InInventory POWERIRONFEET {
+			DrawImage "STBOX", -24, 0;
 		}
-	}
-	InInventory STHUD_LI_Score2 {
-		DrawImage "SCORE",  2  , 26 ;
-		DrawNumber 99, INDEXFONT, untranslated, score, alignment(left), 24, 26;
-	}
-	InInventory STHUD_LI_Frags1 {
-		gamemode deathmatch
-		{
-			DrawImage "FRAGS",  2  , 32 ;
-			DrawNumber 99, INDEXFONT, untranslated, frags, alignment(left), 24, 32;
+	
+		InInventory POWERLIGHTAMP {
+			DrawImage "STBOX", -48, 0;
 		}
-	}
-	InInventory STHUD_LI_Frags2 {
-		DrawImage "FRAGS",  2  , 32 ;
-		DrawNumber 99, INDEXFONT, untranslated, frags, alignment(left), 24, 32;
+
+		InInventory POWERINVISIBILITY {
+			DrawImage "STBOX", -72, 0;
+		}
+	
+		InInventory POWERINVULNERABLE {
+			DrawImage "STBOX", -96, 0;
+		}
 	}
 }
+InInventory STHUD_PowerUps2 {
+	InInventory NOT STHUD_Barless {
+		DrawImage "STBOX", -24, 0;
+		DrawImage "STBOX", -48, 0;
+		DrawImage "STBOX", -72, 0;
+		DrawImage "STBOX", -96, 0;
+		}
+	
+	DrawImage "DSUIT", -21, 2;
+	DrawImage "DVISR", -45, 2;
+	DrawImage "DINVS", -69, 2;	
+	DrawImage "DINVA", -93, 2;
+	}
+	
+// General
+InInventory STHUD_PowerUps1 || STHUD_PowerUps2 {
+	InInventory "PowerIronfeet" {
+		DrawImage "SUIT", -21, 2;
+		DrawNumber  3, INDEXFONT, untranslated, PowerupTime RadSuit, alignment(center), -11, 17;
+		}
+	
+	InInventory "PowerLightamp" {
+		DrawImage "VISR", -45, 2;
+		DrawNumber  3, INDEXFONT, untranslated, PowerupTime INFRARED, alignment(center), -35, 17;
+		}
+	
+	InInventory "PowerInvisibility" {
+		DrawImage "INVS", -69, 2;	
+		DrawNumber  3, INDEXFONT, untranslated, PowerupTime BlurSphere, alignment(center), -59, 17;
+		}
+	
+	InInventory "PowerInvulnerable" {
+		DrawImage "INVA", -93, 2;
+		DrawNumber  3, INDEXFONT, untranslated, PowerupTime InvulnerabilitySphere, alignment(center), -83, 17;
+		}
+}
+
 }

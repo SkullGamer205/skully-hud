@@ -1,0 +1,3 @@
+addkeysection "SkullyHUD" SkullyHUD
+addmenukey 	  "$SKULLY_HUD_TITLE" "openmenu st_menu"
+defaultbind \ "+sthud_open"

@@ -1,7 +1,7 @@
 [enu eng en default]
 
 SKULLY_HUD_TITLE    	= "Skully HUD Settings"			;
-SKULLY_HUD_VERSION  	= "v2024.11.21"					;
+SKULLY_HUD_VERSION  	= "v2024.11.25"					;
 SKULLY_BARLESS_HUD  	= "Barless Mode"				;
 SKULLY_CENTER_HPAP  	= "Center Health / Armor value"	;
 SKULLY_ARMOR_ABSOR 		= "Show armor absorption"		;
@@ -9,6 +9,10 @@ SKULLY_CENTER_AMMO  	= "Center Ammo value"			;
 SKULLY_SHOW_ALL_AMMOS	= "Show all ammos"				;
 // SKULLY_PERCENTAGES = "Show perventages"				;
 SKULLY_SWAP_AMMO    	= "Swap alt. Ammo"				;
+SKULLY_POWERUPS			= "Show PowerUps"				;
+SKULLY_PWR_TYPE0		= "No" 							;
+SKULLY_PWR_TYPE1		= "Only used"					;
+SKULLY_PWR_TYPE2		= "Yes"							;
 SKULLY_INVENTORY    	= "Inventory"					;
 SKULLY_INV_TYPE0    	= "Disabled"					;
 SKULLY_INV_TYPE1    	= "Replace Mugshot"				;

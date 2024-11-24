@@ -5,12 +5,12 @@ Script "SkullyHUD_Barless" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_barless") == 1)
+		if(GetCVar("sthud_barless") == true)
 		{
 			GiveInventory("STHUD_Barless", 1);
 		}
 		
-		else if(GetCVar("sthud_barless") == 0)
+		else if(GetCVar("sthud_barless") == false)
 		{
 			TakeInventory("STHUD_Barless", 1);
 		}
@@ -22,12 +22,12 @@ Script "SkullyHUD_HPAP_Centered" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_hpap_centered") == 1)
+		if(GetCVar("sthud_hpap_centered") == true)
 		{
 			GiveInventory("STHUD_HPAP_Centered", 1);
 		}
 		
-		else if(GetCVar("sthud_hpap_centered") == 0)
+		else if(GetCVar("sthud_hpap_centered") == false)
 		{
 			TakeInventory("STHUD_HPAP_Centered", 1);
 		}
@@ -39,12 +39,12 @@ Script "SkullyHUD_Armor_Absoption" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_armor_absoption") == 1)
+		if(GetCVar("sthud_armor_absoption") == true)
 		{
 			GiveInventory("STHUD_Armor_Absoption", 1);
 		}
 		
-		else if(GetCVar("sthud_armor_absoption") == 0)
+		else if(GetCVar("sthud_armor_absoption") == false)
 		{
 			TakeInventory("STHUD_Armor_Absoption", 1);
 		}
@@ -56,12 +56,12 @@ Script "SkullyHUD_Ammo_Centered" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_ammo_centered") == 1)
+		if(GetCVar("sthud_ammo_centered") == true)
 		{
 			GiveInventory("STHUD_Ammo_Centered", 1);
 		}
 		
-		else if(GetCVar("sthud_ammo_centered") == 0)
+		else if(GetCVar("sthud_ammo_centered") == false)
 		{
 			TakeInventory("STHUD_Ammo_Centered", 1);
 		}
@@ -73,12 +73,12 @@ Script "SkullyHUD_Swap_Ammo" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_swap_ammo") == 1)
+		if(GetCVar("sthud_swap_ammo") == true)
 		{
 			GiveInventory("STHUD_Swap_Ammo", 1);
 		}
 		
-		else if(GetCVar("sthud_swap_ammo") == 0)
+		else if(GetCVar("sthud_swap_ammo") == false)
 		{
 			TakeInventory("STHUD_Swap_Ammo", 1);
 		}
@@ -90,12 +90,12 @@ Script "SkullyHUD_Show_Ammos" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_show_ammos") == 1)
+		if(GetCVar("sthud_show_ammos") == true)
 		{
 			GiveInventory("STHUD_Show_Ammos", 1);
 		}
 		
-		else if(GetCVar("sthud_show_ammos") == 0)
+		else if(GetCVar("sthud_show_ammos") == false)
 		{
 			TakeInventory("STHUD_Show_Ammos", 1);
 		}
@@ -107,14 +107,37 @@ Script "SkullyHUD_Boom_Colors" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_boom_colors") == 1)
+		if(GetCVar("sthud_boom_colors") == true)
 		{
 			GiveInventory("STHUD_Boom_Colors", 1);
 		}
 		
-		else if(GetCVar("sthud_boom_colors") == 0)
+		else if(GetCVar("sthud_boom_colors") == false)
 		{
 			TakeInventory("STHUD_Boom_Colors", 1);
+		}
+		Delay(25);
+	}
+}
+
+Script "SkullyHUD_PowerUps" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_powerups") == 0)
+		{
+			TakeInventory("STHUD_PowerUps1", 1);
+			TakeInventory("STHUD_PowerUps2", 1);
+		}
+		if(GetCVar("sthud_powerups") == 1)
+		{
+			GiveInventory("STHUD_PowerUps1", 1);
+			TakeInventory("STHUD_PowerUps2", 1);
+		}
+		if(GetCVar("sthud_powerups") == 2)
+		{
+			TakeInventory("STHUD_PowerUps1", 1);
+			GiveInventory("STHUD_PowerUps2", 1);
 		}
 		Delay(25);
 	}
@@ -228,12 +251,12 @@ Script "SkullyHUD_LevelInfo_Time" ENTER
 {
 	while (true)
 	{
-		if(GetCVar("sthud_li_time") == 1)
+		if(GetCVar("sthud_li_time") == true)
 		{
 			GiveInventory("STHUD_LI_Time", 1);
 		}
 		
-		else if(GetCVar("sthud_li_time") == 0)
+		else if(GetCVar("sthud_li_time") == false)
 		{
 			TakeInventory("STHUD_LI_Time", 1);
 		}

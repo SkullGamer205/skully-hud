@@ -14,3 +14,9 @@ STATUSFONT
     - STTMINUS
     NOTRANSLATION 109
 }
+
+// Index Font
+INDEXFONT
+{
+  Template IDFNT%03d
+}
