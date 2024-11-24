@@ -28,10 +28,12 @@ Also, I made this mod to practice Doom modding a little (I could have practiced 
 * **Show armor absorption** (Shows the percentage of damage absorption by armor to the right of the armor)
 * **Center ammo value** (Toggle alignment from right edge to center)
 * **Swap alt. Ammo** (Swaps Ammo1 and Ammo2 (This is useful for some mods) )
+* **Show PowerUps** ( Show activated powerups in this moment )
 * **Inventory** (Toggles the display of the current inventory slot: Disabled, Replace Mugshot, Above Mugshot)
 * **Level info** (Toggles the display of level information (Time, Kills, Items, Secrets, Points): Disabled, Brief, Full)
 * **Show Time** (Level Time)
-* **Show score** (Useful for the [Lazy Points](https://forum.zdoom.org/viewtopic.php?t=66565) mod and various arcade mods)
+* **Show score** (Useful for the teamplay, [Lazy Points](https://forum.zdoom.org/viewtopic.php?t=66565) mod and various features)
+* **Show frags** (Useful for Deathmatch)
 * **Boom colors** (Makes the numbers more colorful)
 
 ### Screenshots
