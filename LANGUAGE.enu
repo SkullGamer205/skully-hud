@@ -1,7 +1,7 @@
 [enu eng en default]
 
 SKULLY_HUD_TITLE    	= "Skully HUD Settings"			;
-SKULLY_HUD_VERSION  	= "v2024.11.25"					;
+SKULLY_HUD_VERSION  	= "v2024.12.01"					;
 SKULLY_BARLESS_HUD  	= "Barless Mode"				;
 SKULLY_CENTER_HPAP  	= "Center Health / Armor value"	;
 SKULLY_ARMOR_ABSOR 		= "Show armor absorption"		;
@@ -9,6 +9,12 @@ SKULLY_CENTER_AMMO  	= "Center Ammo value"			;
 SKULLY_SHOW_ALL_AMMOS	= "Show all ammos"				;
 // SKULLY_PERCENTAGES = "Show perventages"				;
 SKULLY_SWAP_AMMO    	= "Swap alt. Ammo"				;
+SKULLY_WEAPS_TYPE		= "ARMS style"					;
+SKULLY_WEAPS_TYPE0		= "None"						;
+SKULLY_WEAPS_TYPE1		= "Compact"						;
+SKULLY_WEAPS_TYPE2		= "Full (UP)"					;
+SKULLY_WEAPS_TYPE3		= "Full (DOWN)"					;
+SKULLY_WEAPS_DOWN		= "Show ARMS Below AMMO"		;
 SKULLY_POWERUPS			= "Show PowerUps"				;
 SKULLY_PWR_TYPE0		= "No" 							;
 SKULLY_PWR_TYPE1		= "Only used"					;

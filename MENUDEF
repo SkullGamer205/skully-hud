@@ -11,6 +11,7 @@ OptionMenu "ST_MENU"
 //	Option "$SKULLY_PERCENTAGES"	, "sthud_percentages"		, "ONOFF"
 	Option "$SKULLY_SHOW_ALL_AMMOS"	, "sthud_show_ammos"		, "ONOFF"
 	Option "$SKULLY_SWAP_AMMO"  	, "sthud_swap_ammo"			, "ONOFF"
+	Option "$SKULLY_WEAPS_TYPE"  	, "sthud_weapstype"			, "sthud_weaps_type"		
 	Option "$SKULLY_POWERUPS"		, "sthud_powerups"			, "sthud_pwr_type"
 	Option "$SKULLY_INVENTORY"		, "sthud_inventory"			, "sthud_inv_type"
 	Option "$SKULLY_LEVELINFO"		, "sthud_levelinfo"			, "sthud_li_type"
@@ -19,6 +20,14 @@ OptionMenu "ST_MENU"
 	Option "$SKULLY_SHOWFRAGS"  	, "sthud_li_frags"			, "sthud_frags_type"
 	
 	Option "$SKULLY_BOOM_COLORS"	, "sthud_boom_colors"		, "ONOFF"
+}
+
+OptionValue "sthud_weaps_type"
+{
+	0, "$SKULLY_WEAPS_TYPE0"
+	1, "$SKULLY_WEAPS_TYPE1"
+	2, "$SKULLY_WEAPS_TYPE2"
+	3, "$SKULLY_WEAPS_TYPE3"
 }
 
 OptionValue "sthud_pwr_type"

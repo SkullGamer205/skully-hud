@@ -6,7 +6,9 @@ monospacefonts true, "0", center;
 resolution 320, 200;
 
 StatusBar Fullscreen, FullscreenOffsets {
-// Draw Modules
+
+// Modules ////////////////////////////////////////////////////////////////////
+// STBAR MODULES / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
   InInventory Not STHUD_Barless {
 
 // Bottom Left
@@ -16,18 +18,34 @@ StatusBar Fullscreen, FullscreenOffsets {
 	Drawimage "STARMOR"  ,  34  , -16  ;
 	Drawimage "STKEYS"   ,  92  , -32  ;
 
-inInventory PowerStrength {
-	Drawimage "BSKMINI"  ,  25  , -31  ;
-}
+	inInventory PowerStrength {
+		Drawimage "BSKMINI"  ,  25  , -31  ;
+	}
 // Bottom Right
-	Drawimage "STAMMO"   , -46  , -32  ;
-	
-	InInventory STHUD_Show_Ammos {
-		Drawimage "STAMMOS"   , -117  , -32  ;
+
+	inInventory STHUD_WeapsStyle1 {
+		InInventory STHUD_Show_Ammos {
+			Drawimage "STAMMOS"   , -117  , -32  ;
+		}
+		Drawimage "STAMMO"   , -46  , -32  ;
+	}
+	InInventory STHUD_WeapsStyle2 {
+		InInventory STHUD_Show_Ammos {
+			Drawimage "STAMMOS"   , -117  , -32  ;
+		}
+		Drawimage "STAMMO"   , -46  , -32  ;
+		Drawimage "STWEAPS"  , -117 , -46  ;
+	}
+	InInventory STHUD_WeapsStyle3 {
+		InInventory STHUD_Show_Ammos {
+			Drawimage "STAMMOS"   , -117  , -46  ;
+		}
+		Drawimage "STAMMO"   , -46  , -46  ;
+		Drawimage "STWEAPS"  , -117 , -14  ;
 	}
 }
 
-// STBAR'less Modules
+// STBAR'less MODULES / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
   InInventory STHUD_Barless {
 
 // Health ////////////
@@ -39,48 +57,115 @@ inInventory PowerStrength {
 // Armor /////////////
 		Drawimage "ARMOR"   ,  37  , -13  ;
 
-	UsesSecondaryAmmo {
-	Drawimage "CLIP"     , -22  , -3 , centerbottom  ;
-	} else UsesAmmo {
-	Drawimage "AMMO"     , -38  , -9 ;	
+// Ammo //////////////
+	inInventory STHUD_WeapsStyle1 {
+		UsesSecondaryAmmo {
+			Drawimage "CLIP"     , -22  , -3 , centerbottom  ;
+		} else UsesAmmo {
+			Drawimage "AMMO"     , -38  , -9 ;	
+		}
 	}
+	inInventory STHUD_WeapsStyle2  {
+		UsesSecondaryAmmo {
+			Drawimage "CLIP"     , -22  , -3 , centerbottom  ;
+		} else UsesAmmo {
+			Drawimage "AMMO"     , -38  , -9 ;	
+			Drawimage "ARMS"     , -111  , -41 ;	
+		}
+	}
+	inInventory STHUD_WeapsStyle3  {
+		UsesSecondaryAmmo {
+			Drawimage "CLIP"     , -22  , -17 , centerbottom  ;
+		} else UsesAmmo {
+			Drawimage "AMMO"     , -38  , -23 ;	
+			Drawimage "ARMS"     , -111  , -9 ;
+		}
+	}
+	
 // Ammos /////////////
-
-	InInventory STHUD_Show_Ammos {
-		DrawImage "AMMOS", -102, -27;
-		DrawImage "LINE", -75, -27;
-		DrawImage "LINE", -75, -21;
-		DrawImage "LINE", -75, -15;
-		DrawImage "LINE", -75, -9;
-		
+	inInventory STHUD_WeapsStyle1 || STHUD_WeapsStyle2 {
+		InInventory STHUD_Show_Ammos {
+			DrawImage "AMMOS", -102, -27 ; 
+			DrawImage "LINE", -75,   -27 ;
+			DrawImage "LINE", -75,   -21 ;
+			DrawImage "LINE", -75,   -15 ;
+			DrawImage "LINE", -75,   -9  ;
+		}
+	}
+	inInventory STHUD_WeapsStyle3 {
+		InInventory STHUD_Show_Ammos {
+			DrawImage "AMMOS", -102, -41 ;
+			DrawImage "LINE", -75,   -41 ;
+			DrawImage "LINE", -75,   -35 ;
+			DrawImage "LINE", -75,   -29 ;
+			DrawImage "LINE", -75,   -23 ;
+		}
 	}
 }
 
 // Weapon Slots ////////////////////////////////////////////////////////////////
+InInventory STHUD_WeapsStyle1 {
+	DrawSwitchableImage  WeaponSlot 1 , "STGNUM1" , "STYSNUM1" ,  -43 , -38 ;
+	DrawSwitchableImage  WeaponSlot 2 , "STGNUM2" , "STYSNUM2" ,  -39 , -38 ;
+	DrawSwitchableImage  WeaponSlot 3 , "STGNUM3" , "STYSNUM3" ,  -35 , -38 ;
+	DrawSwitchableImage  WeaponSlot 4 , "STGNUM4" , "STYSNUM4" ,  -31 , -38 ;
+	DrawSwitchableImage  WeaponSlot 5 , "STGNUM5" , "STYSNUM5" ,  -27 , -38 ;
+	DrawSwitchableImage  WeaponSlot 6 , "STGNUM6" , "STYSNUM6" ,  -23 , -38 ;
+	DrawSwitchableImage  WeaponSlot 7 , "STGNUM7" , "STYSNUM7" ,  -19 , -38 ;
+	DrawSwitchableImage  WeaponSlot 8 , "STGNUM8" , "STYSNUM8" ,  -15 , -38 ;
+	DrawSwitchableImage  WeaponSlot 9 , "STGNUM9" , "STYSNUM9" ,  -11 , -38 ;
+	DrawSwitchableImage  WeaponSlot 0 , "STGNUM0" , "STYSNUM0" ,  -7  , -38 ;
+}
 
-DrawSwitchableImage  WeaponSlot 0 , "STGNUM0" , "STYSNUM0" ,  -43 , -38 ;
-DrawSwitchableImage  WeaponSlot 1 , "STGNUM1" , "STYSNUM1" ,  -39 , -38 ;
-DrawSwitchableImage  WeaponSlot 2 , "STGNUM2" , "STYSNUM2" ,  -35 , -38 ;
-DrawSwitchableImage  WeaponSlot 3 , "STGNUM3" , "STYSNUM3" ,  -31 , -38 ;
-DrawSwitchableImage  WeaponSlot 4 , "STGNUM4" , "STYSNUM4" ,  -27 , -38 ;
-DrawSwitchableImage  WeaponSlot 5 , "STGNUM5" , "STYSNUM5" ,  -23 , -38 ;
-DrawSwitchableImage  WeaponSlot 6 , "STGNUM6" , "STYSNUM6" ,  -19 , -38 ;
-DrawSwitchableImage  WeaponSlot 7 , "STGNUM7" , "STYSNUM7" ,  -15 , -38 ;
-DrawSwitchableImage  WeaponSlot 8 , "STGNUM8" , "STYSNUM8" ,  -11 , -38 ;
-DrawSwitchableImage  WeaponSlot 9 , "STGNUM9" , "STYSNUM9" ,  -7  , -38 ;
+InInventory STHUD_WeapsStyle2 {
+	DrawSwitchableImage  WeaponSlot 1 , "STGNUM1" , "STYSNUM1" ,  -78 , -42 ;
+	DrawSwitchableImage  WeaponSlot 2 , "STGNUM2" , "STYSNUM2" ,  -70 , -42 ;
+	DrawSwitchableImage  WeaponSlot 3 , "STGNUM3" , "STYSNUM3" ,  -62 , -42 ;
+	DrawSwitchableImage  WeaponSlot 4 , "STGNUM4" , "STYSNUM4" ,  -54 , -42 ;
+	DrawSwitchableImage  WeaponSlot 5 , "STGNUM5" , "STYSNUM5" ,  -46 , -42 ;
+	DrawSwitchableImage  WeaponSlot 6 , "STGNUM6" , "STYSNUM6" ,  -38 , -42 ;
+	DrawSwitchableImage  WeaponSlot 7 , "STGNUM7" , "STYSNUM7" ,  -30 , -42 ;
+	DrawSwitchableImage  WeaponSlot 8 , "STGNUM8" , "STYSNUM8" ,  -22 , -42 ;
+	DrawSwitchableImage  WeaponSlot 9 , "STGNUM9" , "STYSNUM9" ,  -14 , -42 ;
+	DrawSwitchableImage  WeaponSlot 0 , "STGNUM0" , "STYSNUM0" ,  -6  , -42 ;
+}
+InInventory STHUD_WeapsStyle3 {
+	DrawSwitchableImage  WeaponSlot 1 , "STGNUM1" , "STYSNUM1" ,  -78 , -10 ;
+	DrawSwitchableImage  WeaponSlot 2 , "STGNUM2" , "STYSNUM2" ,  -70 , -10 ;
+	DrawSwitchableImage  WeaponSlot 3 , "STGNUM3" , "STYSNUM3" ,  -62 , -10 ;
+	DrawSwitchableImage  WeaponSlot 4 , "STGNUM4" , "STYSNUM4" ,  -54 , -10 ;
+	DrawSwitchableImage  WeaponSlot 5 , "STGNUM5" , "STYSNUM5" ,  -46 , -10 ;
+	DrawSwitchableImage  WeaponSlot 6 , "STGNUM6" , "STYSNUM6" ,  -38 , -10 ;
+	DrawSwitchableImage  WeaponSlot 7 , "STGNUM7" , "STYSNUM7" ,  -30 , -10 ;
+	DrawSwitchableImage  WeaponSlot 8 , "STGNUM8" , "STYSNUM8" ,  -22 , -10 ;
+	DrawSwitchableImage  WeaponSlot 9 , "STGNUM9" , "STYSNUM9" ,  -14 , -10 ;
+	DrawSwitchableImage  WeaponSlot 0 , "STGNUM0" , "STYSNUM0" ,  -6  , -10 ;
+}
 
 // All Ammos ///////////////////////////////////////////////////////////////////
-
 InInventory STHUD_Show_Ammos {
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, Clip, alignment(right), -78, -27;
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, Shell, alignment(right), -78, -21;
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, RocketAmmo, alignment(right), -78, -15;
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, Cell, alignment(right), -78, -9;
+	InInventory STHUD_WeapsStyle1 || STHUD_WeapsStyle2 {
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, Clip, alignment(right), -78, -27;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, Shell, alignment(right), -78, -21;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, RocketAmmo, alignment(right), -78, -15;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, Cell, alignment(right), -78, -9;
 
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Clip), alignment(right), -52, -27;
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Shell), alignment(right), -52, -21;
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(RocketAmmo), alignment(right), -52, -15;
-	DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Cell), alignment(right), -52, -9;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Clip), alignment(right), -52, -27;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Shell), alignment(right), -52, -21;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(RocketAmmo), alignment(right), -52, -15;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Cell), alignment(right), -52, -9;
+	}
+	InInventory STHUD_WeapsStyle3 {
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, Clip, alignment(right), -78, -41;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, Shell, alignment(right), -78, -35;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, RocketAmmo, alignment(right), -78, -29;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, Cell, alignment(right), -78, -23;
+
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Clip), alignment(right), -52, -41;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Shell), alignment(right), -52, -35;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(RocketAmmo), alignment(right), -52, -29;
+		DrawNumber  3, INDEXFONT_DOOM, untranslated, ammocapacity(Cell), alignment(right), -52, -23;
+	}
 }
 
 // Health (51 -28) /////////////////////////////////////////////////////////////
@@ -153,31 +238,63 @@ InInventory STHUD_Inventory2 {
 
 // AMMO ////////////////////////////////////////////////////////////////////////
 InInventory NOT STHUD_Ammo_Centered {
-	UsesSecondaryAmmo {
-		InInventory NOT STHUD_Swap_Ammo {
-			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -29;
-			DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -16;
+	InInventory STHUD_WeapsStyle1 || STHUD_WeapsStyle2 {
+		UsesSecondaryAmmo {
+			InInventory NOT STHUD_Swap_Ammo {
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -16;
+				DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -29;
+				}
+			InInventory STHUD_Swap_Ammo {
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -16;
+				DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(right), -2, -29;
+				}
+			} else UsesAmmo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -29;
 			}
-		InInventory STHUD_Swap_Ammo {
-			DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(right), -2, -29;
-			DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -16;
+		}
+	InInventory STHUD_WeapsStyle3 {
+		UsesSecondaryAmmo {
+			InInventory NOT STHUD_Swap_Ammo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -43;
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -30;
+				}
+			InInventory STHUD_Swap_Ammo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(right), -2, -43;
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -30;
+				}
+			} else UsesAmmo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -43;
 			}
-		} else UsesAmmo {
-			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(right), -2, -29;
 		}
 	}
 InInventory STHUD_Ammo_Centered {
-	UsesSecondaryAmmo {
-		InInventory NOT STHUD_Swap_Ammo {
+	InInventory STHUD_WeapsStyle1 || STHUD_WeapsStyle2 {
+		UsesSecondaryAmmo {
+			InInventory NOT STHUD_Swap_Ammo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -29;
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -16;
+			}
+			InInventory STHUD_Swap_Ammo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(center), -23, -29;
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -16;
+			}
+		} else UsesAmmo {
 			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -29;
-			DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -16;
 		}
-		InInventory STHUD_Swap_Ammo {
-			DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(center), -23, -29;
-			DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -16;
+	}
+	InInventory STHUD_WeapsStyle3 {
+		UsesSecondaryAmmo {
+			InInventory NOT STHUD_Swap_Ammo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -43;
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo2, alignment(right), -2, -30;
+			}
+			InInventory STHUD_Swap_Ammo {
+				DrawNumber  4, STATUSFONT, untranslated, Ammo2, alignment(center), -23, -43;
+				DrawNumber  4, INDEXFONT,  untranslated, Ammo1, alignment(right), -2, -30;
+			}
+		} else UsesAmmo {
+			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -43;
 		}
-	} else UsesAmmo {
-			DrawNumber  4, STATUSFONT, untranslated, Ammo1, alignment(center), -23, -29;
 	}
 }
 
@@ -329,6 +446,5 @@ InInventory STHUD_PowerUps1 || STHUD_PowerUps2 {
 		DrawImage "INVA", -93, 2;
 		DrawNumber  3, INDEXFONT, untranslated, PowerupTime InvulnerabilitySphere, alignment(center), -83, 17;
 		}
-}
-
+	}
 }

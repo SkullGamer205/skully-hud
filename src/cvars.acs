@@ -103,6 +103,40 @@ Script "SkullyHUD_Show_Ammos" ENTER
 	}
 }
 
+
+Script "SkullyHUD_Weaps_Style" ENTER
+{
+	while (true)
+	{
+		if(GetCVar("sthud_weapstype") == 0)
+		{
+			TakeInventory("STHUD_WeapsStyle1", 1);
+			TakeInventory("STHUD_WeapsStyle2", 1);
+			TakeInventory("STHUD_WeapsStyle3", 1);
+		}
+		if(GetCVar("sthud_weapstype") == 1)
+		{
+			GiveInventory("STHUD_WeapsStyle1", 1);
+			TakeInventory("STHUD_WeapsStyle2", 1);
+			TakeInventory("STHUD_WeapsStyle3", 1);
+		}
+		if(GetCVar("sthud_weapstype") == 2)
+		{
+			TakeInventory("STHUD_WeapsStyle1", 1);
+			GiveInventory("STHUD_WeapsStyle2", 1);
+			TakeInventory("STHUD_WeapsStyle3", 1);
+		}
+		if(GetCVar("sthud_weapstype") == 3)
+		{
+			TakeInventory("STHUD_WeapsStyle1", 1);
+			TakeInventory("STHUD_WeapsStyle2", 1);
+			GiveInventory("STHUD_WeapsStyle3", 1);
+		}
+		Delay(25);
+	}
+}
+
+
 Script "SkullyHUD_Boom_Colors" ENTER
 {
 	while (true)

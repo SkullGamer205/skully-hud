@@ -116,6 +116,108 @@ Graphic "STBOX", 24, 24
 	Patch "STBOX5", 0	, 21
 	Patch "STBOX6", 12	, 21
 }
+
+
+
+Graphic "AMMOL1", 36, 2
+{
+	PATCH "STARMS", 0 	,0
+}
+
+Graphic "AMMOL2", 36, 1
+{
+	PATCH "STARMS", 0 	, -1
+}
+
+Graphic "AMMOL3", 36, 11
+{
+	PATCH "STARMS", 0 	, -21
+}
+
+Graphic "AMMOLEFT", 36, 14
+{
+	PATCH "AMMOL1", 0 , 0
+	PATCH "AMMOL2", 0 , 2
+	PATCH "AMMOL3", 0 , 3
+}
+
+
+
+Graphic "AMMOM1", 5 , 11
+{
+	PATCH "STARMS", -14	, 0
+}
+
+Graphic "AMMOM2", 3 , 11
+{
+	PATCH "STARMS", -23	, 0
+}
+
+Graphic "AMMOM3", 5 , 3
+{
+	PATCH "STARMS", -14 , -29
+}
+
+Graphic "AMMOM4", 3 , 3
+{
+	PATCH "STARMS", -23 , -29
+}
+
+Graphic "AMMOMIDL", 8 , 14
+{
+	PATCH "AMMOM1", 0 , 0
+	PATCH "AMMOM2", 5 , 0
+	PATCH "AMMOM3", 0 , 11
+	PATCH "AMMOM4", 5 , 11
+}
+
+
+
+Graphic "AMMOR1", 7 , 11
+{
+	PATCH "STARMS", -26	, 0
+}
+
+Graphic "AMMOR2", 3 , 11
+{
+	PATCH "STARMS", -37	, 0
+}
+
+Graphic "AMMOR3", 7 , 3
+{
+	PATCH "STARMS", -26 , -29
+}
+
+Graphic "AMMOR4", 3 , 3
+{
+	PATCH "STARMS", -37 , -29
+}
+
+Graphic "AMMORIGH", 10 , 14
+{
+	PATCH "AMMOR1", 0 , 0
+	PATCH "AMMOR2", 7 , 0
+	PATCH "AMMOR3", 0 , 11
+	PATCH "AMMOR4", 7 , 11
+}
+
+
+
+Graphic "STWEAPS", 118, 14
+{
+	PATCH "AMMOLEFT", 0 , 0
+	PATCH "AMMOMIDL", 36 , 0
+	PATCH "AMMOMIDL", 44 , 0
+	PATCH "AMMOMIDL", 52 , 0
+	PATCH "AMMOMIDL", 60 , 0
+	PATCH "AMMOMIDL", 68 , 0
+	PATCH "AMMOMIDL", 76 , 0
+	PATCH "AMMOMIDL", 84 , 0
+	PATCH "AMMOMIDL", 92 , 0
+	PATCH "AMMOMIDL", 100 , 0
+	PATCH "AMMORIGH", 108 , 0
+}
+
 // Clips
 Graphic CLIPICON, 32, 32
 {

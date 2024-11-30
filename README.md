@@ -4,7 +4,7 @@
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 <p align="center">
-<a href="https://github.com/SkullGamer205/skully-hud"><img src="https://raw.githubusercontent.com/SkullGamer205/skully-hud/main/logo.png" alt="Logo"></a>
+<a href="https://github.com/SkullGamer205/skully-hud"><img src="logo.png" alt="Logo"></a>
 <p align="center"><b>
 Skully HUD
 </b></p>
@@ -26,6 +26,7 @@ Also, I made this mod to practice Doom modding a little (I could have practiced 
 * **Show armor absorption** (Shows the percentage of damage absorption by armor to the right of the armor)
 * **Center ammo value** (Toggle alignment from right edge to center)
 * **Swap alt. Ammo** (Swaps Ammo1 and Ammo2 (This is useful for some mods) )
+* **Arms Style** (Changes style of ARMS module)
 * **Show PowerUps** ( Show activated powerups in this moment )
 * **Inventory** (Toggles the display of the current inventory slot: Disabled, Replace Mugshot, Above Mugshot)
 * **Level info** (Toggles the display of level information (Time, Kills, Items, Secrets, Points): Disabled, Brief, Full)
@@ -35,6 +36,7 @@ Also, I made this mod to practice Doom modding a little (I could have practiced 
 * **Boom colors** (Makes the numbers more colorful)
 
 ### Screenshots
+##### *Conttains old screenshots*
 <details open>
 <summary>Detailed Review</summary>
 
@@ -45,28 +47,40 @@ Also, I made this mod to practice Doom modding a little (I could have practiced 
 ![Barless mode](.screenshots/05.png)
 
 ![Level info](.screenshots/02.png) ![Custom keys compatibility](.screenshots/04.png)
+
+![Effects](.screenshots/32.png)
 </details>
 
 <details open>
 <summary>Review "on the battlefield"ю</summary>
 
 ![Screenshot](.screenshots/18.png)
+![Screenshot](.screenshots/26.png)
 ![Screenshot](.screenshots/17.png)
 ![Screenshot](.screenshots/16.png)
 ![Screenshot](.screenshots/10.png)
 ![Screenshot](.screenshots/09.png)
+![Screenshot](.screenshots/27.png)
+![Screenshot](.screenshots/28.png)
+![Screenshot](.screenshots/29.png)
+![Screenshot](.screenshots/21.png)
 ![Screenshot](.screenshots/13.png)
 ![Screenshot](.screenshots/12.png)
+![Screenshot](.screenshots/22.png)
+![Screenshot](.screenshots/23.png)
 ![Screenshot](.screenshots/11.png)
 ![Screenshot](.screenshots/15.png)
 ![Screenshot](.screenshots/14.png)
+![Screenshot](.screenshots/20.png)
 ![Screenshot](.screenshots/08.png)
 ![Screenshot](.screenshots/07.png)
 ![Screenshot](.screenshots/06.png)
+![Screenshot](.screenshots/31.png)
+![Screenshot](.screenshots/30.png)
 </details>
 
 ### Install
-* [Pre-release](https://github.com/SkullGamer205/skully-hud/releases/tag/Pre-release)
+* [Release](https://github.com/SkullGamer205/skully-hud/releases/tag/release)
 ****
 
 ## License

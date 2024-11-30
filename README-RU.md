@@ -26,8 +26,9 @@ Skully HUD
 * **Отображать поглощение брони** (Отображает процент поглощения урона бронёй справа от брони)
 * **Центрировать патроны** (Переключить выравнивание с правого края в центр)
 * **Поменять местами индикаторы патронов** (Меняет местами Ammo1 и Ammo2 (Это полезно для некоторых модификаций) )
-* **Инвентарь** (Переключает отображение текущего слота инвентаря: Отключён, вместо лица, выше лица)
+* **Стиль ARMS** (Меняет стиль ARMS модуля)
 * **Отображать усилители** (Отображает усилители, активные на данный момент времени)
+* **Инвентарь** (Переключает отображение текущего слота инвентаря: Отключён, вместо лица, выше лица)
 * **Информация об уровне** (Переключает отображение информации об уровне (Время, убийства, предметы, секреты, очки): отключена, краткая, полная)
 * **Отображать секундомер** (Время уровня)
 * **Отображать очки** (Полезно для кооператива,  мода [Lazy Points](https://forum.zdoom.org/viewtopic.php?t=66565) и различных плюшек)
@@ -45,28 +46,40 @@ Skully HUD
 ![Режим "Без STBAR"](.screenshots/05.png)
 
 ![Информация об уровне](.screenshots/02.png) ![Поддержка множества видов ключей](.screenshots/04.png)
+
+![Эффекты](.screenshots/32.png)
 </details>
 
 <details open>
 <summary>Обзор в бою</summary>
 
 ![Screenshot](.screenshots/18.png)
+![Screenshot](.screenshots/26.png)
 ![Screenshot](.screenshots/17.png)
 ![Screenshot](.screenshots/16.png)
 ![Screenshot](.screenshots/10.png)
 ![Screenshot](.screenshots/09.png)
+![Screenshot](.screenshots/27.png)
+![Screenshot](.screenshots/28.png)
+![Screenshot](.screenshots/29.png)
+![Screenshot](.screenshots/21.png)
 ![Screenshot](.screenshots/13.png)
 ![Screenshot](.screenshots/12.png)
+![Screenshot](.screenshots/22.png)
+![Screenshot](.screenshots/23.png)
 ![Screenshot](.screenshots/11.png)
 ![Screenshot](.screenshots/15.png)
 ![Screenshot](.screenshots/14.png)
+![Screenshot](.screenshots/20.png)
 ![Screenshot](.screenshots/08.png)
 ![Screenshot](.screenshots/07.png)
 ![Screenshot](.screenshots/06.png)
+![Screenshot](.screenshots/31.png)
+![Screenshot](.screenshots/30.png)
 </details>
 
 ### Установить
-* [Pre-release](https://github.com/SkullGamer205/skully-hud/releases/tag/Pre-release)
+* [Release](https://github.com/SkullGamer205/skully-hud/releases/tag/release)
 ****
 
 ### Лицензия
